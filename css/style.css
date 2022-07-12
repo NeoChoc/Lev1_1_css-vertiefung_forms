@@ -1,0 +1,96 @@
+/* -- general */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+/* -- form */
+.form fieldset {
+	border: none;
+	margin: 0 40vh;
+}
+
+.form fieldset label {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 0.5em;
+}
+
+/* -- input fields */
+.form fieldset input[type='text'],
+.form fieldset input[type='email'],
+.form fieldset select,
+.form fieldset textarea {
+	font-size: 12px;
+	padding: 0.3em;
+	border: 1px solid rgb(199, 196, 196);
+	border-radius: 3px;
+}
+
+.form fieldset input[type='text']:focus,
+.form fieldset input[type='email']:focus,
+.form fieldset input [type='select']:focus,
+.form fieldset input[type='textarea']:focus {
+	border-color: darkturquoise;
+}
+
+.form__input--short {
+	width: 49.6%;
+}
+
+.form__input--long {
+	width: 100%;
+}
+
+/* -- input type select */
+.form fieldset input[type='select'] {
+	background-color: gray;
+}
+
+.form fieldset input[type='select'] option {
+	display: block;
+	background-color: gray;
+	border: none;
+}
+
+.form fieldset input[type='select'] option:checked::before {
+	content: 'c ';
+	font-size: 20px;
+}
+
+/* -- input type textarea */
+.form fieldset input[type='textarea'] {
+	height: 23vh;
+}
+
+/* -- input type submit */
+.form fieldset input[type='submit'] {
+	border: none;
+	background-color: darkturquoise;
+	color: white;
+	padding: 0.5em;
+	width: 100%;
+}
+
+.form fieldset input[type='submit']:hover {
+	background-color: black;
+}
+
+.form fieldset input[type='select'],
+.form fieldset input[type='select'] option,
+.form fieldset input[type='textarea'],
+.form fieldset input[type='submit'] {
+	width: 100%;
+}
+
+/* -- required asterisk */
+.required::after {
+	content: ' *';
+	color: red;
+}
